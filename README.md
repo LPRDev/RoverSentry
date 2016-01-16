@@ -1,5 +1,7 @@
 # RoverSentry
-An autonomous land based drone.
+An autonomous land based drone based upon ArduPilot and RaspberryPi.
+
+----
 
 RoverSentry is a project that will transform a standard RC Car into robotic sentry that will circle the property and take pictures of any suspicious activity it encounters. 
 Once programmed with the patrol path the RoverSentry is autonomous and will continue its patrol until the entire patrol path has been traversed. 
