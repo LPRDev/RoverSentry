@@ -2,7 +2,7 @@
 <img src="https://github.com/LPRDev/RoverSentry/blob/master/images/RoverSentry_small.png" align="right">
 </a>
 # RoverSentry 
-An autonomous land based drone based upon ArduPilot and RaspberryPi.
+An autonomous land based drone utilizing ArduPilot and RaspberryPi.
 ----
 
 RoverSentry is a project that will transform a standard RC Car into robotic sentry that will circle the property and take pictures of any suspicious activity it encounters. 
