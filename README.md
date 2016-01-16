@@ -10,3 +10,5 @@ A web application will be created that will be able to view video from the rover
 RoverSentry is based upon the ArduRover project but adds a Raspberry Pi for taking video/still picures, and adding sensors (heat, movement, light, etc). 
 A Turnigy Buggy (RC Car ) will be modified to house an APM 2.6 autopilot controller board along with the Raspberry Pi, a GPS receiver, a Camera with night vision, and sensors, raspicam. 
 
+View the [RoverSentry wiki](https://github.com/LPRDev/RoverSentry/wiki) for further detials.
+
