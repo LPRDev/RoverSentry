@@ -9,7 +9,7 @@ RoverSentry is a project that will transform a standard RC Car into robotic sent
 Once programmed with the patrol path the RoverSentry is autonomous and will continue its patrol until the entire patrol path has been traversed. 
 A web application will be created that will be able to view live video from the rover at any time, snap and upload pictures, and take control of the Rover.
 
-RoverSentry is based upon the ArduRover project but adds a Raspberry Pi for taking video/still picutres, and adding sensors (heat, movement, light, etc). A Turnigy Buggy (RC Car) will be modified to house an autopilot controller board along with the Raspberry Pi, a GPS receiver, a Camera with night vision, and sensors, raspicam. 
+RoverSentry is based upon the [ArduRover](http://rover.ardupilot.com/) project but adds a Raspberry Pi for taking video/still picutres, and adding sensors (heat, movement, light, etc). A Turnigy Buggy (RC Car) will be modified to house an autopilot controller board along with the Raspberry Pi, a GPS receiver, a Camera with night vision, and sensors, raspicam. 
 
 View the [RoverSentry wiki](https://github.com/LPRDev/RoverSentry/wiki) for further detials.
 
