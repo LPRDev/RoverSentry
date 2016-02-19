@@ -1,0 +1,112 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+ h1 {
+     font-family: arial;
+ }
+ p {
+     font-family: arial;
+     font-size: 12pt;
+ }
+ .black {
+     background-color: black;
+ }
+ .box {
+     background-color: whitesmoke;
+     border-style: solid;
+     border-radius: 13px;
+     padding: 5px;
+     margin-bottom: 10px;
+ }
+ button {
+     font-size: 14pt;
+     padding: 10px;
+ }
+ .button_board {
+     width: auto;
+     margin-top: 10px;
+     margin-bottom: 20px;
+     padding: 10px;
+     background-color: wheat;
+ }
+ .button_half {
+     min-width: 80px;
+ }
+ .button_whole {
+     min-width: 320px;
+ }
+ #camera_stream {}
+ .cont {
+     background-color: grey;
+     margin-right: auto;
+     margin-left: auto;
+     text-align: center;
+     padding-bottom: 30px;
+     max-width: 100%;
+ }
+ .control_board {}
+ .centerize {
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+ }
+ .footer {
+     height: 100px;
+     width: 100%;
+     vertical-align: text-bottom;
+ }
+ #gallery_board {
+     max-width: 100%;
+ }
+ #menutop {
+     height: 80px;
+ }
+ .menu_bar {
+     width: 100%;
+     margin-right: auto;
+     margin-left: auto;
+     margin-bottom: 6px;
+     text-align: center;
+     padding-bottom: 10px;
+ }
+ .menu_button {
+     font-size: 14pt;
+     background-color: ghostwhite;
+ }
+ .photo {
+     width: 99%;
+     min-width: 240px;
+ }
+ .toolbar_board {
+     width: auto;
+     background-color: wheat;
+ }
+ .white {
+     background-color: whitesmoke;
+ }
+ #video_stream {
+     margin-top: 20px;
+     margin-bottom: 0px;
+     overflow: hidden;
+     max-width: 100%;
+ }
+ '<!-- Link Styling CSS --> 
+ A {
+     text-decoration: none;
+ }
+ A:link {
+     text-decoration: none;
+     color: #0066FF
+ }
+ A:visited {
+     text-decoration: none;
+     color: #0066FF
+ }
+ A:hover {
+     text-decoration: none;
+     color: #99CCFF;
+ }
+ A:active {
+     text-decoration: none;
+ }

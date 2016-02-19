@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>UV4L Control Panel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        label {
+            width: 18ch;
+            padding-right: 2px;
+            display: inline-block
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Camera Control Panel</h1>
+    <form id="settings" action="panel" autocomplete="off" method="get">
+        <fieldset>
+            <legend>Resolution & Format:</legend>
+            width
+            <input type="number" id="width" name="width" min="64" step="8" value="640"> height
+            <input type="number" id="height" name="height" min="64" step="8" value="480"> format
+            <select id="format" name="format">
+                <option style="color:#00FF00" value="1196444237">MJPEG Video (streamable)</option>
+                <option style="color:#00FF00" selected="selected" value="1195724874">JPEG Still (streamable)</option>
+                <option style="color:#0000FF" value="875967048">H264 (raw, streamable)</option>
+                <option style="color:#0000FF" value="842093913">YUV 4:2:0 (raw, streamable)</option>
+                <option style="color:#FF0000" value="825382478">Y/CrCb 4:2:0 (not streamable)</option>
+                <option style="color:#FF0000" value="842094169">YVU 4:2:0 (not streamable)</option>
+                <option style="color:#FF0000" value="1346520914">RGB565 (not streamable)</option>
+                <option style="color:#FF0000" value="1380075346">RGB565X (not streamable)</option>
+                <option style="color:#FF0000" value="859981650">RGB24 LE (not streamable)</option>
+                <option style="color:#FF0000" value="861030210">BGR24 BE (not streamable)</option>
+                <option style="color:#FF0000" value="876758866">RGBA (not streamable)</option>
+                <option style="color:#FF0000" value="877807426">BGRA (not streamable)</option>
+            </select>
+
+            <p><small>NOTE: if the camera is already in use for streaming by another application/client, applying the resolution & format will not have any effect (until all the streaming sessions have been closed).</small></p>
+
+        </fieldset>
+        <fieldset>
+            <legend>Control settings:</legend>
+            <label for="9963776">brightness</label>
+            <input type="range" id="9963776" name="9963776" min="0" max="100" step="1" value="50">
+            <br>
+            <label for="9963777">contrast</label>
+            <input type="range" id="9963777" name="9963777" min="-100" max="100" step="1" value="0">
+            <br>
+            <label for="9963778">saturation</label>
+            <input type="range" id="9963778" name="9963778" min="-100" max="100" step="1" value="0">
+            <br>
+            <label for="9963790">red balance</label>
+            <input type="range" id="9963790" name="9963790" min="0" max="800" step="1" value="100">
+            <br>
+            <label for="9963791">blue balance</label>
+            <input type="range" id="9963791" name="9963791" min="0" max="800" step="1" value="100">
+            <br>
+            <label for="9963803">sharpness</label>
+            <input type="range" id="9963803" name="9963803" min="-100" max="100" step="1" value="0">
+            <br>
+            <label for="9963810">rotate</label>
+            <input type="range" id="9963810" name="9963810" min="0" max="360" step="90" value="0">
+            <br>
+            <label for="134217728">shutter speed</label>
+            <input type="number" id="134217728" name="134217728" min="0" max="65535" step="1" value="0">
+            <br>
+            <label for="134217729">zoom factor</label>
+            <input type="number" id="134217729" name="134217729" min="1" max="8" step="1" value="1">
+            <br>
+            <label for="134217730">iso sensitivity</label>
+            <input type="number" id="134217730" name="134217730" min="0" max="800" step="50" value="0">
+            <br>
+            <label for="134217739">jpeg quality</label>
+            <input type="number" id="134217739" name="134217739" min="1" max="100" step="1" value="85">
+            <br>
+            <label for="134217741">frame rate</label>
+            <input type="number" id="134217741" name="134217741" min="0" max="120" step="1" value="30">
+            <br>
+            <label for="9963796">horizontal mirror</label>
+            <input type="radio" id="9963796" name="9963796" value="1"> enable
+            <input type="radio" name="9963796" value="0" checked="checked"> disable
+            <br>
+            <label for="9963797">vertical mirror</label>
+            <input type="radio" id="9963797" name="9963797" value="1"> enable
+            <input type="radio" name="9963797" value="0" checked="checked"> disable
+            <br>
+            <label for="134217734">text overlay</label>
+            <input type="radio" id="134217734" name="134217734" value="1"> enable
+            <input type="radio" name="134217734" value="0" checked="checked"> disable
+            <br>
+            <label for="134217736">object/face detection</label>
+            <input type="radio" id="134217736" name="134217736" value="1"> enable
+            <input type="radio" name="134217736" value="0" checked="checked"> disable
+            <br>
+            <label for="134217737">stills denoise</label>
+            <input type="radio" id="134217737" name="134217737" value="1" checked="checked"> enable
+            <input type="radio" name="134217737" value="0"> disable
+            <br>
+            <label for="134217738">video denoise</label>
+            <input type="radio" id="134217738" name="134217738" value="1" checked="checked"> enable
+            <input type="radio" name="134217738" value="0"> disable
+            <br>
+            <label for="134217740">image stabilization</label>
+            <input type="radio" id="134217740" name="134217740" value="1"> enable
+            <input type="radio" name="134217740" value="0" checked="checked"> disable
+            <br>
+            <label for="134217731">awb mode</label>
+            <select id="134217731" name="134217731">
+                <option selected="selected" value="0">auto</option>
+                <option value="1">cloudy</option>
+                <option value="2">flash</option>
+                <option value="3">fluorescent</option>
+                <option value="4">horizon</option>
+                <option value="5">incandescent</option>
+                <option value="6">off</option>
+                <option value="7">shade</option>
+                <option value="8">sun</option>
+                <option value="9">tungsten</option>
+            </select>
+            <br>
+            <label for="134217732">exposure mode</label>
+            <select id="134217732" name="134217732">
+                <option value="0">antishake</option>
+                <option selected="selected" value="1">auto</option>
+                <option value="2">backlight</option>
+                <option value="3">beach</option>
+                <option value="4">fireworks</option>
+                <option value="5">fixedfps</option>
+                <option value="6">night</option>
+                <option value="7">nightpreview</option>
+                <option value="8">snow</option>
+                <option value="9">sports</option>
+                <option value="10">spotlight</option>
+                <option value="11">verylong</option>
+            </select>
+            <br>
+            <label for="134217733">exposure metering</label>
+            <select id="134217733" name="134217733">
+                <option selected="selected" value="0">average</option>
+                <option value="1">backlit</option>
+                <option value="2">matrix</option>
+                <option value="3">spot</option>
+            </select>
+            <br>
+            <label for="134217735">drc strength</label>
+            <select id="134217735" name="134217735">
+                <option value="0">high</option>
+                <option value="1">low</option>
+                <option value="2">medium</option>
+                <option selected="selected" value="3">off</option>
+            </select>
+            <br>
+
+            <fieldset>
+                <legend><small>Notes</small></legend>
+                <ul>
+                    <li><small>If you want to turn on <i>text-overlay</i> while the camera is in use by another application
+AND <i>text-overlay</i> was turned off when that application opened the Camera, you need to close that application first.
+The same consideration is valid for <i>object-detection</i> (<i>face</i> detection by default). In case, you can also turn on these options when loading the driver.</small></li>
+                    <li><small>When <i>text-overlay</i> is enabled, both image width and image height should be multiple of 16.</small></li>
+                    <li><small><i>red-balance</i> and <i>blue-balance</i> have effect only when <i>awb mode</i> is set to <i>off</i>.</small></li>
+                    <li><small><b>Many other controls are available on driver loading only.</b></small></li>
+                </ul>
+            </fieldset>
+        </fieldset>
+        <input type="checkbox" id="apply_changed" name="apply_changed" value="1" checked="checked">Check to apply resolution, format and changed settings only, uncheck to reapply everything
+        <br>
+        <input type="submit" value="Apply" title="Applying will have immediate effect on any application or client currently using the camera">
+    </form>
+    <br>
+    <a href="/" target="_top">home</a>
+</body>
+
+</html>

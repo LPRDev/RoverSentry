@@ -1,0 +1,67 @@
+<!-- <link rel="stylesheet" href="style/app_STYLE.css"> -->
+<script>
+    var full_menu = true;
+
+    $(document).ready(function() {
+
+        //If the screen is a phone, collapse the navbar.
+        if (screen.width < 480) {
+            //alert("Phone detected.");
+            full_menu = false;
+            $("#menubar").attr("style", "opacity: 0.5;");
+            $("#home").hide();
+            $("#gallery").hide();
+            $("#help").hide();
+            $("#about").hide();
+        }
+
+        // Code for menu bar page redirects.
+        $("#hide").click(function() {
+
+            if (full_menu == false) {
+                $("#menubar").attr("style", "opacity: 1.0;");
+                full_menu = true;
+            }
+            else {
+                $("#menubar").attr("style", "opacity: 0.5;");
+                full_menu = false;
+            }
+                
+            $("#home").toggle(900);
+            $("#gallery").toggle(900);
+            $("#help").toggle(900);
+            $("#about").toggle(900);
+        });
+
+    });
+
+</script>
+
+<!-- Naviagtion bar buttons. -->
+<div id="menubar" class="menu_bar black navbar-fixed-top">
+    <ul class="nav nav-pills nav-justified">
+
+        <li role="presentation">
+            <button id="hide" type="button" class="btn btn-info btn-group-justified navbar-btn">===</button>
+        </li>
+        <li id="home" role="presentation" class="active">
+            <a href="index.php" class="menu_button"> Home </a>
+            <!--      <button type="button" class="button_half" id="home"> Home </button>-->
+        </li>
+        <li id="gallery" role="presentation">
+            <a href="gallery.php" class="menu_button"> Gallery </a>
+            <!--      <button type="button" class="button_half" id="gallery"> Gallery </button>-->
+        </li>
+        <li id="help" role="presentation">
+            <a href="help.php" class="menu_button"> Help </a>
+            <!--        <button type="button" class="button_half" id="help"> Help </button>-->
+        </li>
+        <li id="about" role="presentation">
+            <a href="about.php" class="menu_button"> About </a>
+            <!--  <button type="button" class="button_half" id="about"> About </button>-->
+        </li>
+
+    </ul>
+
+
+</div>
