@@ -10,7 +10,7 @@
     <title> RoverSentry Web App </title>
 
     <!-- Tab Icon: -->
-    <LINK REL="SHORTCUT ICON" HREF="http://nuc2.home/Rdev/RoverSentry/uploads/73a331a2d6a51225c5cb9c91397fd2ff/TurnigyBuggy.jpg" />
+<!--    <LINK REL="SHORTCUT ICON" HREF="TurnigyBuggy.jpg" /> NOTE THAT THE ICON DOESNT WORK-->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../source/bootstrap-3.3.6-dist/css/bootstrap.min.css">
@@ -87,21 +87,47 @@
         </div>
 
         <div id="video_stream" class="centerize" style="width:100%; height:500px;" width=100% min-width="320" min-height="240" ;>
-            <iframe id="camera_stream" class="centerize" src="http://raspberrypi.home:8080/stream" style="border:none;" scrolling="yes" seamless sandbox width=100% height=100%>
+            <iframe id="camera_stream" class="centerize" src="http://localhost:8080/stream" style="border:none;" scrolling="yes" seamless sandbox width=100% height=100%>
+                <!--                raspberrypi.home-->
             </iframe>
         </div>
 
         <div class="button_board">
+
+
+            <div class="centerize" style="max-width: 600px;">
+
+                <div class="row" id="buttonLand" style="margin-top: 30px;">
+                    <div class="col-sm-3">
+                        <button id="snapshot" class="btn btn-info btn-lg btn-block" role="button">Take Snapshot</button>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <button id="video" class="btn btn-warning btn-lg btn-block" role="button">Record Video</button>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <button id="hide_controls" class="btn btn-danger btn-lg btn-block" role="button">Cam Options</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button id="restart" class="btn btn-success btn-lg btn-block" role="button">Restart UV4L</button>
+                    </div>
+                </div>
+
+            </div>
+
+<!--
             <div class="btn-group btn-group-lg">
                 <button type="button" class="btn btn-primary" id="snapshot">Take Snapshot </button>
                 <button type="button" class="btn btn-primary" id="video">Record Video </button>
                 <button type="button" class="btn btn-primary" id="hide_controls">Cam Options</button>
                 <button type="button" class="btn btn-primary" id="restart">Restart UV4L </button>
             </div>
+-->
         </div>
 
         <div class="control_board white">
-            <iframe id="controls" src="http://raspberrypi.home:8080/panel" width=99% height=400> </iframe>
+            <iframe id="controls" src="http://localhost:8080/panel" width=99% height=400> </iframe>
         </div>
 
         <div class="button_board">
@@ -125,7 +151,7 @@
             
                 
             ?>
-                
+
         </div>
 
 
