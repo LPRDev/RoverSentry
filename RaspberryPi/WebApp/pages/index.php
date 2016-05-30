@@ -90,13 +90,10 @@
 
             <?php 
             
-            
             echo '<iframe id="camera_stream" class="centerize" src="http://' . gethostname() . ':8080/stream" style="border:none;" scrolling="yes" seamless sandbox width=100% height=100%>    
-                </iframe>';
-                
+                </iframe>';    
                 
             ?>
-
 
 
         </div>
@@ -137,7 +134,13 @@
 
 
         <div class="control_board white">
-            <iframe id="controls" src="http://localhost:8080/panel" width=99% height=400> </iframe>
+
+            <?php 
+            
+            echo '<iframe id="controls" src="http://' . gethostname() . ':8080/panel" width=99% height=400> </iframe>';    
+                
+            ?>
+
         </div>
 
         <div class="button_board">
