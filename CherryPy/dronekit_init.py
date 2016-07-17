@@ -2,7 +2,8 @@
 
 from dronekit import connect, VehicleMode, LocationGlobal
 import time, string, cherrypy, usb, socket, sys
-from apm_init import APM26
+#from apm_init import APM26
+from apm_init import *
 
 # Enable web server to be availble on all interfaces
 cherrypy.config.update({'server.socket_host': '0.0.0.0'})
