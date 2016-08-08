@@ -197,21 +197,25 @@ class DroneControl(object):
 	###########################################################################
 	@cherrypy.expose
 	def setHome(self):
-		status="Home not set"
-		if (APM26.vehicle.gps_0.fix_type < 3):
-			status+=" due to poor GPS reception." 
-			status+="<BR> Number of GPS locks = %s" % APM26.vehicle.gps_0.fix_type
-			return status
-		try:
-			APM26.vehicle.commands.download()
-			APM26.vehicle.commands.wait_ready() # wait until download is complete.
-			cmds=APM26.vehicle.commands
-			status = "Home hase been set to : %s" %  APM26.vehicle.home_location
-			status +="<BR>Here is the current location: %s" % APM26.vehicle.location.global_frame
-			status+="<BR> Number of GPS locks = %s" % APM26.vehicle.gps_0.fix_type
-		except Exception as e:
-			status="Error setting home: Specific Error: %s" %e.message
-		return status
+		currwaypoint = APM26.vehicle.commands.next-1
+		newWp = Command(0,0,0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_WAYPOINT, 0, 0, 0, 0, 0, 0,cmds[1].x, cmds[1].y, cmds[1].z)
+		APM26.vehicle.commands.add(newWp)
+		
+#		status="Home not set"
+#		if (APM26.vehicle.gps_0.fix_type < 3):
+#			status+=" due to poor GPS reception." 
+#			status+="<BR> Number of GPS locks = %s" % APM26.vehicle.gps_0.fix_type
+#			return status
+#		try:
+#			APM26.vehicle.commands.download()
+#			APM26.vehicle.commands.wait_ready() # wait until download is complete.
+#			cmds=APM26.vehicle.commands
+#			status = "Home hase been set to : %s" %  APM26.vehicle.home_location
+#			status +="<BR>Here is the current location: %s" % APM26.vehicle.location.global_frame
+#			status+="<BR> Number of GPS locks = %s" % APM26.vehicle.gps_0.fix_type
+#		except Exception as e:
+#			status="Error setting home: Specific Error: %s" %e.message
+#		return status
 		
 	def setwaypoint(self):
 		#APM26.vehicle.commands.download()
