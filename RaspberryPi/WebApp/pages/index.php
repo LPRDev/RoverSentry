@@ -57,6 +57,16 @@
                     window.location.href = "../scripts/restart_drivers.php";
             });
 
+            //Home function
+            $("#homeButton").click(function() {
+               window.location.href=""; 
+            });
+            
+             //Halt function
+            $("#haltButton").click(function() {
+               window.location.href="../scripts/halt.php"; 
+            });
+            
             // APM Pause/Resume toggle.
             $("#pilot_toggle").click(function() {
                 window.location.href = "../scripts/pause_resume.php";
@@ -145,7 +155,8 @@
 
         <div class="button_board">
             <p>Coming soon... More controls go here...</p>
-            <button type="button" id="pilot_toggle"> Pause/Resume </button>
+            <button type="button" id="homeButton"> Home </button>
+            <button type="button" id="haltButton"> Halt/Resume </button>
             <?php
                 
                 // Open the file for reading.
