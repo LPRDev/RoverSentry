@@ -13,12 +13,12 @@
     <!-- Tab Icon: -->
     <LINK REL="SHORTCUT ICON" HREF="http://nuc2.home/Rdev/RoverSentry/uploads/73a331a2d6a51225c5cb9c91397fd2ff/TurnigyBuggy.jpg" />
 
-   
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../source/bootstrap-3.3.6-dist/css/bootstrap.min.css">
     <!-- Basic CSS Styling: -->
     <link rel="stylesheet" href="../style/app_STYLE.css">
-     <!-- Include JQUERY CDN: -->
+    <!-- Include JQUERY CDN: -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Bootstrap core JavaScript: -->
     <script src="../source/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
@@ -26,8 +26,8 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            
-            
+
+
         });
 
     </script>
@@ -50,15 +50,44 @@
             Release Date: 12/31/2015
             
             </pre>
-        
-        </div>
-        
+
+            <?php
             
+            //Fetch the read me file from the github page.
+                $url = 'https://github.com/LPRDev/RoverSentry/blob/master/README.md';
+                $response = file_get_contents($url);
+            
+                if ($response == "") {
+                    //Test to see if the connection exists before trying to display.
+                    echo "Error, could not fetch about information.";
+                }
+                else {
+                    
+                    //Cut out the readme file from the webpage and display.
+                    $source_header = strstr($response, '</head>', true);
+                    $start_concat = strpos($response, '<div id="readme" class="readme blob instapaper_body">');
+                   
+                    $response = substr($response, $start_concat);
+                                            
+                    $readme = $source_header . strstr($response, 'site-footer-container', true);
+                                            
+                    echo $readme;
+                }
+            
+            
+               
+            
+            ?>
+
+
+        </div>
+
+
 
     </div>
 
     <div class="footer">
-         <?php include 'footer.html'; ?>
+        <?php include 'footer.html'; ?>
     </div>
 
 
