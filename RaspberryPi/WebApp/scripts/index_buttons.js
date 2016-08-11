@@ -35,14 +35,14 @@
 
             //Home function
             $("#homeButton").click(function() {
-               window.location.href=""; 
+                window.location.href = "../scripts/home.php";
             });
-            
-             //Halt function
+
+            //Halt function
             $("#haltButton").click(function() {
-               window.location.href="../scripts/halt.php"; 
+                window.location.href = "../scripts/halt.php";
             });
-            
+
             // APM Pause/Resume toggle.
             $("#pilot_toggle").click(function() {
                 window.location.href = "../scripts/pause_resume.php";
