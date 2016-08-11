@@ -59,14 +59,14 @@
 
             //Home function
             $("#homeButton").click(function() {
-               window.location.href=""; 
+                window.location.href = "../scripts/home.php";
             });
-            
-             //Halt function
+
+            //Halt function
             $("#haltButton").click(function() {
-               window.location.href="../scripts/halt.php"; 
+                window.location.href = "../scripts/halt.php";
             });
-            
+
             // APM Pause/Resume toggle.
             $("#pilot_toggle").click(function() {
                 window.location.href = "../scripts/pause_resume.php";
@@ -155,26 +155,42 @@
 
         <div class="button_board">
             <p>Coming soon... More controls go here...</p>
-            <button type="button" id="homeButton"> Home </button>
-            <button type="button" id="haltButton"> Halt/Resume </button>
-            <?php
-                
-                // Open the file for reading.
-                $toggle = fopen("/usr/share/RoverSentry/PIR/pir_sensor_auto.txt","r") or die("Unable to open file!");
-                $data= fread($toggle, filesize("/usr/share/RoverSentry/PIR/pir_sensor_auto.txt"));
+
+
+            <div class="container">
+
+                <div class="centerize" style="max-width: 700px;">
+
+                    <div class="col-sm-3">
+                        <button id="homeButton" class="btn btn-info btn-lg btn-block" role="button">Home</button>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <button id="haltButton" class="btn btn-warning btn-lg btn-block" role="button">Halt/Resume </button>
+                    </div>
                     
-                // If the auto PIR is on, make the button green and on.
-                if($data == "ON") {
-                    echo '<button style="color: green;" type="button" id="photo_toggle"> Auto-Photo: ON </button>';
-                } else {
-                    echo '<button style="color: red;" type="button" id="photo_toggle"> Auto-Photo: OFF </button>';
-                }
-            
-                //Close the toggle file.
-                fclose($toggle);
-            
+                    <div class="col-sm-3">
+                         <?php
                 
-            ?>
+                            // Open the file for reading.
+                                $toggle = fopen("/usr/share/RoverSentry/PIR/pir_sensor_auto.txt","r") or die("Unable to open file!");
+                                $data= fread($toggle, filesize("/usr/share/RoverSentry/PIR/pir_sensor_auto.txt"));
+                    
+                            // If the auto PIR is on, make the button green and on.
+                            if($data == "ON") {
+                                echo '<button style="color: green;" type="button" id="photo_toggle"> Auto-Photo: ON </button>';
+                            } else {
+                                echo '<button style="color: red;" type="button" id="photo_toggle"> Auto-Photo: OFF </button>';
+                            }
+            
+                            //Close the toggle file.
+                            fclose($toggle);         
+                        ?>
+                    </div>
+
+
+                </div>
+            </div>
 
         </div>
 
