@@ -44,7 +44,7 @@
             });
 
             // APM Pause/Resume toggle.
-            $("#pilot_toggle").click(function() {
+            $("#resumeButton").click(function() {
                 window.location.href = "../scripts/pause_resume.php";
             });
 

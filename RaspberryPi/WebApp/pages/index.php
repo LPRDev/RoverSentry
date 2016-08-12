@@ -20,10 +20,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Bootstrap core JavaScript: -->
     <script src="../source/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-    
+
     <!-- Script file for buttons on home page -->
     <script type="text/javascript" src="../scripts/index_buttons.js"></script>
-   
+
 
 </head>
 
@@ -77,17 +77,11 @@
 
         </div>
 
-        <!--
-            <div class="btn-group btn-group-lg">
-                <button type="button" class="btn btn-primary" id="snapshot">Take Snapshot </button>
-                <button type="button" class="btn btn-primary" id="video">Record Video </button>
-                <button type="button" class="btn btn-primary" id="hide_controls">Cam Options</button>
-                <button type="button" class="btn btn-primary" id="restart">Restart UV4L </button>
-            </div>
--->
+
 
 
         <div class="control_board white">
+
 
             <?php 
             
@@ -110,11 +104,25 @@
                     </div>
 
                     <div class="col-sm-3">
-                        <button id="haltButton" class="btn btn-warning btn-lg btn-block" role="button">Halt/Resume </button>
+
+                        <?php 
+                        
+                        //Access the status page and find the groundspeed to determine whether to start or halt.
+                        
+                        
+                        
+                        ?>
+
+                            <button id="haltButton" class="btn btn-warning btn-lg btn-block" role="button">Halt </button>
                     </div>
-                    
+
+
                     <div class="col-sm-3">
-                         <?php
+                        <button id="resumeButton" class="btn btn-warning btn-lg btn-block" role="button">Resume </button>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <?php
                 
                             // Open the file for reading.
                                 $toggle = fopen("/usr/share/RoverSentry/PIR/pir_sensor_auto.txt","r") or die("Unable to open file!");
