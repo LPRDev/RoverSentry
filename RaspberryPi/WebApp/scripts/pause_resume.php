@@ -11,7 +11,17 @@
 //Make an exec call.
 // testing the Pi to APM commands interface. The buttons should call the APM command function (see issue #13) using an exec call.
 
-$url = "http://localhost:9000/resume";
+
+// Open the file for reading.
+$toggle = fopen("host_config.txt","r") or die("Unable to open file!");
+$url= fread($url, filesize("host_config.txt"));
+
+ //Close the toggle file.
+fclose($url);  
+
+
+//$url = "http://localhost:9000/resume";
+
 $response = file_get_contents($url);
 echo $response;
 
