@@ -15,6 +15,8 @@ $url= fread($url, filesize("host_config.txt"));
  //Close the toggle file.
 fclose($url);  
 
+//Concat the string to halt url.
+$url .= "/resume";
 
 //$url = "http://localhost:9000/resume";
 

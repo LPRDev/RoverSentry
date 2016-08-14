@@ -17,6 +17,8 @@ $url= fread($url, filesize("host_config.txt"));
  //Close the toggle file.
 fclose($url);  
 
+//Concat the string to halt url.
+$url .= "/halt";
 
 //$url = "http://localhost:9000/halt";
 $response = file_get_contents($url);

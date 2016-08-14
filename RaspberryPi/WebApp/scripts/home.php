@@ -16,6 +16,8 @@ $url= fread($url, filesize("host_config.txt"));
  //Close the toggle file.
 fclose($url);  
 
+//Concat the string to home url.
+$url .= "/home";
 
 //$url = "http://localhost:9000/home";
 $response = file_get_contents($url);
