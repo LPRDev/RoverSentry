@@ -70,6 +70,10 @@
                     $response = substr($response, $start_concat);
                                             
                     $readme = $source_header . strstr($response, 'site-footer-container', true);
+                    
+                    //add comparison to store the most up to date readme code.
+                    
+                    
                                             
                     echo $readme;
                 }

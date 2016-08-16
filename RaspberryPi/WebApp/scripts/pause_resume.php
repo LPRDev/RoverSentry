@@ -8,12 +8,27 @@
 
 <?php 
 
-//Make an exec call.
-// testing the Pi to APM commands interface. The buttons should call the APM command function (see issue #13) using an exec call.
+// Open the file for reading.
+$toggle = fopen("host_config.txt","r") or die("Unable to open file!");
+$url= fread($url, filesize("host_config.txt"));
 
-echo "Doesn't work yet.";
-exec('');
+ //Close the toggle file.
+fclose($url);  
 
-header("location: ../index.php");
+//Concat the string to halt url.
+$url .= "/resume";
+
+//$url = "http://localhost:9000/resume";
+
+$response = file_get_contents($url);
+echo $response;
+
+if($response == "") {
+    
+    echo "<h1><b>Error! The Cherry Py may be offline.</b></h1>";
+}
+
+sleep(1);
+header('location: ../pages/index.php'); //redirect back to the other page
 
 ?>
