@@ -49,15 +49,12 @@ See the <a href="https://github.com/LPRDev/RoverSentry/wiki/webappRover"> Sentry
 
 # Open Source APIs utilized 
 
-*<H2>Aurdu Pilot :</H2> Ardu Pilot RoverSentry utilizes the [arduroverRS](https://github.com/LPRDev/ardupilotRS) project (a fork of the ardurover projet) but adds a Raspberry Pi for taking video/still picutres, and adding sensors (heat, movement, light, etc). 
+<H2>Aurdu Pilot :</H2> Ardu Pilot RoverSentry utilizes the [arduroverRS](https://github.com/LPRDev/ardupilotRS) project (a fork of the ardurover projet) but adds a Raspberry Pi for taking video/still picutres, and adding sensors (heat, movement, light, etc). 
 
-*<H2>Drone Kit</H2> will be used to handle the communications between the raspberrypi and the APM 2.0 module. It provides the provides an API that allows the raspberry pi (referred to as a "Companion Computer") to use the mav-link protocol to communicate with the ardupilot software running on the APM 2.6. See the <a href="https://github.com/LPRDev/RoverSentry/wiki/Dronekit"> Dronekit wiki page</a> for details.
+<H2>Drone Kit</H2> will be used to handle the communications between the raspberrypi and the APM 2.0 module. It provides the provides an API that allows the raspberry pi (referred to as a "Companion Computer") to use the mav-link protocol to communicate with the ardupilot software running on the APM 2.6. See the <a href="https://github.com/LPRDev/RoverSentry/wiki/Dronekit"> Dronekit wiki page</a> for details.
 
-* <H2>Cherrypi</H2> is a minimalist web server written in python. It can be used to provide a simple web page and also supports Rest Calls for each of the methods exposed as a web service. The web page is very primitive so it does not replace the RoverSentry Web app, it complements it. See the <a href="https://github.com/LPRDev/RoverSentry/wiki/CherryPy"> Cherrypi web page </a>for details.
+<H2>Cherrypi</H2> is a minimalist web server written in python. It can be used to provide a simple web page and also supports Rest Calls for each of the methods exposed as a web service. The web page is very primitive so it does not replace the RoverSentry Web app, it complements it. See the <a href="https://github.com/LPRDev/RoverSentry/wiki/CherryPy"> Cherrypi web page </a>for details.
 
 # Rover Sentry Wiki
 
 View the [RoverSentry wiki](https://github.com/LPRDev/RoverSentry/wiki) for further detials.
-
-
-
