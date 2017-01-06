@@ -49,7 +49,7 @@ The RoverSentry web app provides a graphical user interface to view a live video
 * Photo gallery that allows the user to view, sort, and delete photos taken by the drone and snapshots taken by the user. 
 * Help page that provides basic help for operation and information on app settings.
 
-See the <a href="https://github.com/LPRDev/RoverSentry/wiki/webappRover"> Sentry web app user guide </a> for detials.
+See the <a href="https://github.com/LPRDev/RoverSentry/wiki/webapp"> Sentry web app user guide </a> for detials.
 
 # Open Source APIs utilized 
 
