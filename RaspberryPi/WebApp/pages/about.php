@@ -57,12 +57,22 @@
                 $url = 'https://github.com/LPRDev/RoverSentry/blob/master/README.md';
                 $response = file_get_contents($url);
             
+            //Open the stored txt file
+                $source = fopen("help_source.txt","r") or die("Unable to open file!");
+                $content= fread($source, filesize("help_source.txt"));
+
+            //Close the toggle file.
+                fclose($source);  
+            
+            //Test to see if the connection exists before trying to display.
                 if ($response == "") {
-                    //Test to see if the connection exists before trying to display.
-                    echo "Error, could not fetch about information.";
+                   
+                    //echo "Error, could not fetch about information.";
+                    echo $content;
+                    
                 }
                 else {
-                    
+                                 
                     //Cut out the readme file from the webpage and display.
                     $source_header = strstr($response, '</head>', true);
                     $start_concat = strpos($response, '<div id="readme" class="readme blob instapaper_body">');
@@ -71,10 +81,22 @@
                                             
                     $readme = $source_header . strstr($response, 'site-footer-container', true);
                     
-                    //add comparison to store the most up to date readme code.
+                    
+                    //add comparison to store the most up to date readme code.                   
+                    if($content != $readme) {
+                        //Update the content to be the latest version from GitHub.
+                        $content = $readme
+                     
+                        //Open the stored txt file
+                        $source = fopen("help_source.txt","w");
+                        //Write the content to the file.
+                        fwrite($source, $content);
+                        
+                        fclose($source); 
+                    }
                     
                     
-                                            
+                    //Display the up to date code from the web page.                    
                     echo $readme;
                 }
             
