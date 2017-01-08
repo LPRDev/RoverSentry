@@ -9,11 +9,13 @@ RoverSentry is a project that transforms a standard RC Car into robotic sentry t
 Once programmed with the patrol path the RoverSentry is autonomous and will continue its patrol until the entire patrol path has been traversed. 
 
 # Capabilities
-* Web page for setup and mission monitoring
-* Utilizes GPS to traverse a property (reqires mission planner - see below)
-* Video capture with night vision mode
+* Protrols a property and takes snapshots of intruders 
+  * Utilizes GPS to traverse a property (reqires mission planner - see below)
+  * Heat sensing snapshots
+* Web based dashboard for setup and mission monitoring
+  * Gallery of mission snapshots
+  * Video capture with night vision mode
   * Real time viewing of mission using standard browser
-* Heat sensing snapshots
 * Support for real time telemetry monitoring (mission planner compatible) built in
 
 # Hardware
