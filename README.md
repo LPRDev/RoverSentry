@@ -1,5 +1,5 @@
 <a href="https://github.com/LPRDev/RoverSentry/blob/master/images/RoverSentry_1.png">
-<img src="https://github.com/LPRDev/RoverSentry/blob/master/images/RoverSentry_small.png" align="right">
+<img src="https://github.com/LPRDev/RoverSentry/blob/master/images/RoverSentry_small.png" align="right" width="25%"  height="25%">
 </a>
 # RoverSentry 
 An autonomous land based drone utilizing ArduPilot, Dronekit, and RaspberryPi.
