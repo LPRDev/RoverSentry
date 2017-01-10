@@ -32,8 +32,10 @@ The overall cost to reproduce this project from scratch is about $400, < $250 if
 <a href="https://github.com/LPRDev/RoverSentry/blob/master/images/RoverySentryArch.png">
 <img src="https://github.com/LPRDev/RoverSentry/blob/master/images/RoverySentryArch.png" align="left" width="40%"  height="40%" > </a>
 
-The RoverSentry software is comprised of open source and custom software running on both the APM2.6 and a Raspberry Pi 2. Whenever possible open source software was used to provide camera, sensor, or GUI services. Custom software was necessary to contol the APM module, ineface with sensors, and provide a web based app to control functions and view a real time video stream. The modules of code assembled is shown to the right. Refer the Software<a href="https://github.com/LPRDev/RoverSentry/wiki/Architecture"> Architecture page for further details</a>.
-
+The RoverSentry software is comprised of open source and custom software running on both the APM2.6 and a Raspberry Pi 2. Whenever possible open source software was used to provide camera, sensor, or GUI services. Custom software was necessary to contol the APM module, interface with sensors, and provide a web based app to control and view a real time video stream. The modules of code assembled is shown to the left. Refer the Software<a href="https://github.com/LPRDev/RoverSentry/wiki/Architecture"> Architecture wiki page for further details</a>.
+<br>
+<br>
+<br>
 <H3>Aurdu Pilot</H3> RoverSentry utilizes the [arduroverRS](https://github.com/LPRDev/ardupilotRS) project (a fork of the ardurover projet) but adds a Raspberry Pi for taking video/still picutres and handling sensors (heat, movement, light, etc). 
 
 <H3>Drone Kit</H3> is used to handle the communications between the raspberrypi and the APM 2.0 module. It provides the provides an API that allows the raspberry pi (referred to as a "Companion Computer") to use the mav-link protocol to communicate with the ardupilot software running on the APM 2.6. See the <a href="https://github.com/LPRDev/RoverSentry/wiki/Dronekit"> Dronekit wiki page</a> for details.
