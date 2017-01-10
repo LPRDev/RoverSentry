@@ -21,12 +21,24 @@ Once programmed with the patrol path the RoverSentry is autonomous and will cont
 # Hardware
 Here's a shortened list of the parts needed to recreate this project. See the <a href="https://github.com/LPRDev/RoverSentry/wiki/partsList"> part list page </a>for detials on the individual parts and the <a href=https://github.com/LPRDev/RoverSentry/wiki/RoverLayout> Rover layout page </a>for details o the assembly of the components onto the RC Card frame.
 * RC Car
-* Raspbery Pi 2
+* <a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspbery Pi 2</a>
   * Raspberry Pi expansion board
-  * Raspicam with night vision LEDs
-* APM 2.6 module
+  * <a href="http://ardupilot.org/copter/docs/common-apm25-and-26-overview.html">Raspicam with night vision LEDs </a>
+* <a href="http://ardupilot.org/copter/docs/common-apm25-and-26-overview.html">APM 2.6 module</a>
 
 The overall cost to reproduce this project from scratch is about $400, < $250 if you have an RC car and RC controller to start with. All of the costs are Hardware related (not including your time). The software is entrirely free!
+
+# Software Architecture
+<a href="https://github.com/LPRDev/RoverSentry/blob/master/images/RoverySentryArch.png">
+<img src="https://github.com/LPRDev/RoverSentry/blob/master/images/RoverySentryArch.png" align="left" width="30%"  height="30%" > </a>
+
+The RoverSentry software is comprised of open source and custom software running on both the APM2.6 and a Raspberry Pi 2. Whenever possible open source software was used to provide camera, sensor, or GUI services. Custom software was necessary to bridge the APM and Raspberry Pi boards and provide a command set to allow the RoverSentry web app to provide control over the ArduRover Firmware. The modules of code needed to provide the control is shown to the right. Refer the Software<a href="https://github.com/LPRDev/RoverSentry/wiki/Architecture"> Architecture page for further details</a>.
+
+<H3>Aurdu Pilot</H3> RoverSentry utilizes the [arduroverRS](https://github.com/LPRDev/ardupilotRS) project (a fork of the ardurover projet) but adds a Raspberry Pi for taking video/still picutres and handling sensors (heat, movement, light, etc). 
+
+<H3>Drone Kit</H3> is used to handle the communications between the raspberrypi and the APM 2.0 module. It provides the provides an API that allows the raspberry pi (referred to as a "Companion Computer") to use the mav-link protocol to communicate with the ardupilot software running on the APM 2.6. See the <a href="https://github.com/LPRDev/RoverSentry/wiki/Dronekit"> Dronekit wiki page</a> for details.
+
+<H3>CherryPy</H3> is a minimalist web server written in python. It can be used to provide a simple web page and also supports Rest Calls for each of the methods exposed as a web service. The Rover Sentry CherryPy web page is very primitive so it does not replace the RoverSentry Web app, it complements it. See the <a href="https://github.com/LPRDev/RoverSentry/wiki/CherryPy"> CherryPy web page </a>for details.
 
 # Mission Planner 
 <a href="https://github.com/LPRDev/RoverSentry/blob/master/images/Mission%20Planner/MissionPlanner_1.jpg">
@@ -53,13 +65,6 @@ The RoverSentry web app provides a graphical user interface to view a live video
 
 See the <a href="https://github.com/LPRDev/RoverSentry/wiki/webapp"> Sentry web app user guide </a> for detials.
 
-# Open Source APIs utilized 
-
-<H3>Aurdu Pilot</H3> RoverSentry utilizes the [arduroverRS](https://github.com/LPRDev/ardupilotRS) project (a fork of the ardurover projet) but adds a Raspberry Pi for taking video/still picutres and handling sensors (heat, movement, light, etc). 
-
-<H3>Drone Kit</H3> is used to handle the communications between the raspberrypi and the APM 2.0 module. It provides the provides an API that allows the raspberry pi (referred to as a "Companion Computer") to use the mav-link protocol to communicate with the ardupilot software running on the APM 2.6. See the <a href="https://github.com/LPRDev/RoverSentry/wiki/Dronekit"> Dronekit wiki page</a> for details.
-
-<H3>CherryPy</H3> is a minimalist web server written in python. It can be used to provide a simple web page and also supports Rest Calls for each of the methods exposed as a web service. The Rover Sentry CherryPy web page is very primitive so it does not replace the RoverSentry Web app, it complements it. See the <a href="https://github.com/LPRDev/RoverSentry/wiki/CherryPy"> CherryPy web page </a>for details.
 
 # Rover Sentry Wiki
 
