@@ -30,9 +30,9 @@ The overall cost to reproduce this project from scratch is about $400, < $250 if
 
 # Software Architecture
 <a href="https://github.com/LPRDev/RoverSentry/blob/master/images/RoverySentryArch.png">
-<img src="https://github.com/LPRDev/RoverSentry/blob/master/images/RoverySentryArch.png" align="left" width="30%"  height="30%" > </a>
+<img src="https://github.com/LPRDev/RoverSentry/blob/master/images/RoverySentryArch.png" align="left" width="40%"  height="40%" > </a>
 
-The RoverSentry software is comprised of open source and custom software running on both the APM2.6 and a Raspberry Pi 2. Whenever possible open source software was used to provide camera, sensor, or GUI services. Custom software was necessary to bridge the APM and Raspberry Pi boards and provide a command set to allow the RoverSentry web app to provide control over the ArduRover Firmware. The modules of code needed to provide the control is shown to the right. Refer the Software<a href="https://github.com/LPRDev/RoverSentry/wiki/Architecture"> Architecture page for further details</a>.
+The RoverSentry software is comprised of open source and custom software running on both the APM2.6 and a Raspberry Pi 2. Whenever possible open source software was used to provide camera, sensor, or GUI services. Custom software was necessary to contol the APM module, ineface with sensors, and provide a web based app to control functions and view a real time video stream. The modules of code assembled is shown to the right. Refer the Software<a href="https://github.com/LPRDev/RoverSentry/wiki/Architecture"> Architecture page for further details</a>.
 
 <H3>Aurdu Pilot</H3> RoverSentry utilizes the [arduroverRS](https://github.com/LPRDev/ardupilotRS) project (a fork of the ardurover projet) but adds a Raspberry Pi for taking video/still picutres and handling sensors (heat, movement, light, etc). 
 
@@ -68,4 +68,4 @@ See the <a href="https://github.com/LPRDev/RoverSentry/wiki/webapp"> Sentry web 
 
 # Rover Sentry Wiki
 
-View the [RoverSentry wiki](https://github.com/LPRDev/RoverSentry/wiki) for further detials.
+View the [RoverSentry wiki](https://github.com/LPRDev/RoverSentry/wiki) for detials on recreatin the RoverSentry including mechanical drawings and software installation guidance.
