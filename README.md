@@ -26,13 +26,17 @@ Here's a shortened list of the parts needed to recreate this project. See the <a
   * <a href="http://ardupilot.org/copter/docs/common-apm25-and-26-overview.html">Raspicam with night vision LEDs </a>
 * <a href="http://ardupilot.org/copter/docs/common-apm25-and-26-overview.html">APM 2.6 module</a>
 
+The APM2.6 supports the optional use of a telemetry modem which is supported by the Mission Planner application (see below). A Wifi dongle is required for real time viewing of the Video stream from the camera.
+
 The overall cost to reproduce this project from scratch is about $400, < $250 if you have an RC car and RC controller to start with. All of the costs are Hardware related (not including your time). The software is entrirely free!
 
 # Software Architecture
 <a href="https://github.com/LPRDev/RoverSentry/blob/master/images/RoverySentryArch.png">
 <img src="https://github.com/LPRDev/RoverSentry/blob/master/images/RoverySentryArch.png" align="left" width="40%"  height="40%" > </a>
 
-The RoverSentry software is comprised of open source and custom software running on both the APM2.6 and a Raspberry Pi 2. Whenever possible open source software was used to provide camera, sensor, or GUI services. Custom software was necessary to contol the APM module, interface with sensors, and provide a web based app to control and view a real time video stream. The modules of code assembled is shown to the left. Refer the Software<a href="https://github.com/LPRDev/RoverSentry/wiki/Architecture"> Architecture wiki page for further details</a>.
+The RoverSentry software is comprised of open source and custom software running on both the APM2.6 and a Raspberry Pi 2. Whenever possible open source software was used to provide camera, sensor, or GUI services. Custom software was necessary to contol the APM module, interface with sensors, and provide a web based app to control and view a real time video stream. . The modules of code assembled is shown to the left. Refer the Software<a href="https://github.com/LPRDev/RoverSentry/wiki/Architecture"> Architecture wiki page for further details</a>.
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -66,7 +70,6 @@ The RoverSentry web app provides a graphical user interface to view a live video
 * Help page that provides basic help for operation and information on app settings.
 
 See the <a href="https://github.com/LPRDev/RoverSentry/wiki/webapp"> Sentry web app user guide </a> for detials.
-
 
 # Rover Sentry Wiki
 
